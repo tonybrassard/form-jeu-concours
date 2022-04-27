@@ -28,7 +28,7 @@ h1{
 }
 
 header{
-  height: 221px;
+  height: 350px;
   background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
   display: flex;
   align-items: center;
@@ -122,9 +122,7 @@ label{
         width: 320px;
     }
 @media (max-width: 320px) { 
-    header{
-        height: 260px;
-    }
+    
     input{
         width: 280px;
     }
@@ -136,14 +134,17 @@ label{
     </head>
     <body>
           <header>
-              <img src="https://www.gefradis.fr/img/gefradis-logo-1646033570.jpg" alt="logo-gefradis" style="display:block;width: 200px;height: auto;margin-top: 10px;">
-              <h1>JEU CONCOURS</h1>
-              <p style="color: #272976;font-size: 1.5rem;">Foire de paris 2022</p>
+              <img src="https://www.gefradis.fr/img/gefradis-logo-1646033570.jpg" alt="logo-gefradis" style="display:block;width: 180px;height: auto;margin-top: 10px;">
+              <!--<h1>JEU CONCOURS</h1>-->
+              <img src="jeux concourstitle.png" alt="" style="width: 270px;height: auto;display: block;margin-top:10px;margin-bottom:10px;filter: drop-shadow(0px 5px 1px #6f6f6f);">
+              <p style="color: #272976;font-size: 1.5rem;">FOIRE DE PARIS 2022</p>
           </header>
           
         <div id="form" style="padding-bottom: 50px;">
           
+          
           <form id="waterform" action="inscription.php" method="post">
+            
           
           <div class="formgroup" id="inputLastname">
               <label for="inputLastname">Nom *</label>
