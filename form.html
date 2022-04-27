@@ -1,0 +1,197 @@
+
+<html>
+    <head>
+        <title>Jeu concours Gefradis - Foire de Paris</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://www.gefradis.fr/img/favicon.ico?1646033570" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <style>
+           
+@import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+
+
+body, html{
+  padding: 0;
+  margin: 0;
+  font-family: 'Sniglet', cursive;
+}
+h1{
+  font-weight: normal;
+  font-size: 2.4em;
+  font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
+  margin-top: 15px;
+  color: #F90;
+  text-align: center;
+
+}
+
+header{
+  height: 210px;
+  background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#form{
+  background-color: #98d4f3;
+  position: relative;
+  
+}
+form{
+  margin: 0 auto;
+  padding-top: 20px;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label, input, textarea{
+  display: block; 
+}
+input, textarea{
+  width: 320px; 
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 10px;
+  font-family: 'Sniglet', cursive;
+  font-size: 1em;
+  color: #676767;
+  transition: border 0.5s;
+  -webkit-transition: border 0.5s;
+  -moz-transition: border 0.5s;
+  -o-transition: border 0.5s;
+  border: solid 3px #98d4f3;  
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  
+}
+input:focus, textarea:focus{
+  border: solid 3px #77bde0;  
+}
+
+input[type="submit"]{
+  background-color: #F90;
+  color: white;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 1.29em;
+  font-family: 'Sniglet', cursive;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+input[type="submit"]:hover{
+  background-color: #e58f0e;
+  
+}
+label{
+  font-size: 1.5em;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+.formgroup, .formgroup-active, .formgroup-error{
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 10.5%;
+  transition: background-image 0.7s;
+  -webkit-transition: background-image 0.7s;
+  -moz-transition: background-image 0.7s;
+  -o-transition: background-image 0.7s;
+  padding-top: 2px;
+}
+
+.formgroup{
+  background-image: url('http://www.geertjanhendriks.nl/codepen/form/pixel.gif'); 
+}
+.formgroup-active{
+  background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo.png');
+}
+.formgroup-error{
+  background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo-error.png');
+  color: red;
+}
+#div-crg{
+        width: 320px;
+    }
+@media (max-width: 320px) { 
+    header{
+        height: 260px;
+    }
+    input{
+        width: 280px;
+    }
+    #div-crg{
+        width: 280px;
+    }
+}
+        </style>
+    </head>
+    <body>
+          <header>
+              <img src="https://indexa.fr/upload/logo/gefradis_102609.jpeg" alt="logo-gefradis" style="display:block;width: 200px;height: auto;margin-top: 10px;">
+              <h1>JEUX CONCOURS</h1>
+              <p style="color: #272976;font-size: 1.5rem;">Foire de paris 2022</p>
+          </header>
+          
+        <div id="form" style="padding-bottom: 50px;">
+          
+          <form id="waterform" action="inscription.php" method="post">
+          
+          <div class="formgroup" id="inputLastname">
+              <label for="inputLastname">Nom *</label>
+              <input type="text" id="inputLastname" name="inputLastname" required/>
+          </div>
+
+          <div class="formgroup" id="inputFirstname">
+            <label for="inputFirstname">Prénom *</label>
+            <input type="text" id="inputFirstname" name="inputFirstname" required/>
+          </div>
+          
+          <div class="formgroup" id="inputEmail">
+              <label for="inputEmail">E-mail *</label>
+              <input type="email" id="inputEmail" name="inputEmail" />
+          </div>
+
+          <div class="formgroup" id="inputPhone">
+            <label for="inputPhone">Téléphone *</label>
+            <input type="text" id="inputPhone" name="inputPhone" required/>
+          </div>
+        <div style="font-size: 0.8rem;" id="div-crg">
+            <div class="form-check" style="padding-top: 10px; display:flex; align-items: center;">
+                <input class="form-check-input" type="checkbox" value="" id="inputCG" name="inputCG" required>
+                <label class="form-check-label" for="inputCG">
+                    J'ai lu et accepté les <br><a href="#cgts">conditions générales du tirage au sort</a>
+                </label>
+            </div>
+            <div class="form-check" style="padding-top: 10px; display:flex; align-items: center;">
+                <input class="form-check-input" type="checkbox" value="" id="inputNewsletter" name="inputNewsletter" required>
+                <label class="form-check-label" for="inputNewsletter">
+                    J'accepte de recevoir les offres commerciales et newsletters de GEFRADIS
+                </label>
+            </div>
+        </div>
+          
+            <input type="submit" value="Valider" />
+          </form>
+          <div class="container" style="margin-top: 50px;margin-bottom: 50px;">
+            <div style="background:white;border:solid 1px black;padding: 20px;border-radius: 20px;text-align: justify;display: flex;align-items: center;flex-direction: column;">
+                <h2 id="cgts" style="padding-top:50px;padding-bottom:50px;">Règlement du jeu concours</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate aliquam risus eget feugiat. Quisque placerat nunc quis scelerisque malesuada. Sed ut tincidunt dolor, nec commodo quam. Etiam pretium ex a lectus feugiat accumsan non sit amet ex. Duis eget elit orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean ac odio vitae justo sagittis finibus. Maecenas eu facilisis risus, a volutpat dui. Aliquam lacus est, finibus et semper vitae, tincidunt vel erat. Praesent malesuada magna eu purus maximus maximus.</p>
+                <p>Curabitur id dolor interdum, bibendum justo ut, suscipit arcu. Mauris vitae mattis urna. Suspendisse tempor euismod vehicula. Ut sodales fermentum metus in pellentesque. Curabitur a augue id est iaculis rutrum sit amet eu sem. Proin lobortis neque convallis ipsum blandit, at blandit quam laoreet. Nunc lobortis justo velit, sit amet tempor turpis lobortis vel. Nullam laoreet tortor justo, ut sollicitudin est consectetur vitae. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus ut turpis aliquet, placerat turpis a, accumsan neque.</p>
+                <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse aliquet mi sed tortor aliquam, quis hendrerit risus viverra. Integer id turpis nec nulla accumsan ultricies. Pellentesque purus sapien, dictum ut ante sit amet, facilisis dignissim dui. Etiam efficitur eros in ex malesuada, eu ullamcorper metus mollis. Fusce ornare odio dolor, et posuere nisi tincidunt at. Aliquam cursus pharetra magna. Nunc eget volutpat eros. Pellentesque commodo maximus urna at porttitor. Vestibulum risus tellus, hendrerit ac consectetur eu, bibendum vel diam. Integer eu tempus leo, eu ultrices arcu. Aliquam euismod, massa non suscipit laoreet, mauris turpis mollis nisl, in accumsan mauris mi vitae nunc. Aliquam eu condimentum felis. Phasellus ac arcu metus. In mattis sapien sed efficitur dignissim. Ut et tristique massa, non porta nulla.</p>
+                <p>Vivamus vehicula et justo at commodo. Sed pharetra elementum pharetra. Etiam aliquam finibus mi, nec tempor felis bibendum molestie. Praesent eget diam nec purus elementum aliquam ut eget ligula. Etiam nec justo a risus maximus hendrerit id a nibh. Maecenas sit amet purus cursus, vestibulum lectus eu, faucibus nisl. Mauris sodales eleifend odio, a elementum mi aliquet at. Ut sagittis urna a vehicula sagittis. Maecenas sed tellus sodales, commodo odio eu, cursus nulla. Curabitur at auctor neque. Vivamus at fringilla arcu. Morbi dignissim sapien sit amet odio pretium lacinia.</p>
+                <p>Sed a nisl finibus, posuere justo quis, convallis metus. Pellentesque elementum tortor et ante gravida, a sollicitudin mauris vulputate. Nulla mollis auctor orci et pulvinar. Aenean nec velit dui. Suspendisse elementum eu nulla vel lobortis. Praesent quis velit leo. In luctus metus non porttitor laoreet. Donec quis nulla tellus. Donec pretium lacus quis tincidunt tincidunt. Nunc finibus libero sed enim eleifend, quis ullamcorper ipsum bibendum. Sed vitae congue felis. Nullam malesuada semper suscipit.
+            </div>
+        </div>
+        </div>
+        
+    </body>
+</html>
